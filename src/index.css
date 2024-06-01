@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+body {
+    /* background-color: #eef0f1; */
+    text-align: center;
+}
+
+.landing-page{
+    @apply text-3xl m-5
+}
+
+.main{
+    @apply m-2 p-5 rounded-lg text-white
+    w-full shadow-lg flex flex-col justify-center
+    bg-gradient-to-r from-blue-500 to-cyan-400;
+    /* background-color: #214f72; */
+    height: 500px;
+}
+.main-heading{
+    @apply text-6xl m-5
+}
+.main-subheading{
+    @apply m-3 p-3 italic text-2xl
+}
+.reference_number{
+    @apply text-xl m-5
+}
+.main-button{
+    @apply bg-green-600 rounded-lg;
+    height: 40px;
+    width: 120px;
+}
+.input-field{
+    @apply rounded-lg m-2 text-black p-2;
+    height: 40px;
+}
+
+.navigation{
+    @apply flex flex-row text-lg 
+    w-full rounded-lg items-center;
+}
+
+.navigation-pages{
+    @apply flex flex-row w-full justify-center items-center
+    justify-between items-center mb-10 text-xl;
+    /* height: 120px; */
+    width: 100%;
+}
+
+.navigation-box{
+    @apply p-2 flex flex-row text-black cursor-pointer
+    h-full w-full m-5 justify-center items-center bg-slate-100
+    rounded-lg shadow-md hover:bg-slate-200;
+    height: 100px;
+    width: 30%;
+}
+
+.invalid-booking-id{
+    @apply text-3xl text-red-600 p-5
+}
+
+.navigation-image{
+    width:10%;
+    height: 100px;
+}
+
+.steps{
+    @apply bg-slate-100 m-5 p-5 rounded-lg items-center 
+    text-xl;
+}
+
+.steps-heading{
+    @apply text-5xl mt-5
+}
+
+.steps-list{
+    @apply text-left pl-10;
+}
+
+.steps-list-element{
+    @apply m-5 text-2xl
+}
+
+.steps-success{
+    @apply text-green-600
+}
+.steps-fail{
+    @apply text-red-600
+}
+
+
+
+.footer{
+    @apply text-black text-lg rounded-lg m-5;
+    width: 100%;
+}
+.details{
+    @apply bg-white rounded-lg cursor-pointer text-black
+}
+.loading{
+    @apply text-3xl m-10
+}
+.no-user-found{
+    @apply text-3xl m-10
+}
+.patient-name{
+    @apply text-3xl m-2 text-black
+}
+.booking-id{
+    @apply text-3xl m-2 text-black
+}
+.report-details{
+    @apply text-3xl m-2 mb-6 text-black
+}
+
+
+.user-details{
+    @apply m-5 p-2 text-xl text-black rounded-lg
+}
+.user-details-success{
+    @apply font-bold text-green-600 border border-black bg-green-100
+}
+.user-details-fail{
+    @apply font-bold text-red-600 border border-black bg-red-100
+}
+
+
+.test-name{
+    @apply font-bold m-2
+}
+.test-values-table{
+    @apply table-auto mx-auto border border-black rounded-lg
+}
+.tests{
+    @apply m-2
+}
+.test-method{
+    @apply font-bold mb-2
+}
+/* .test-values{
+    @apply m-2
+} */
+.parameter-value{
+    @apply font-bold
+}
+.test-unit{
+    @apply mb-5
+}
+.table-head{
+    @apply py-2 px-4 text-center border border-black
+}
+.table-body{
+    @apply py-2 px-4 text-center border border-black
+}
+
+
+
+.body-chart{
+    @apply flex flex-row justify-center items-center
+}
+.body-chart-element{
+    @apply border-2 border-black m-5 rounded-lg
+}
+.human-body{
+    @apply mr-10;
+    height: 1000px;
+    width: 40%;
+}
+.body-chart-details{
+    @apply m-2;
+    width: 400px;
+}
+.body-chart-heading{
+    @apply font-bold
+}
+
+
+
+.smart-inter{
+    @apply flex flex-col
+}
+.smart-inter-box{
+    @apply border border-black m-3 p-3 rounded-lg cursor-pointer
+}
+.smart-inter-heading{
+    @apply font-bold text-2xl mb-3
+}
+.smart-inter-desc{
+    @apply justify-center text-center items-center m-3
+}
+.smart-inter-values{
+    @apply font-bold ml-2
+}
+.interpretation{
+    @apply text-left ml-5
+}
+.download-button{
+    @apply text-lg text-white p-3 m-5 bg-green-600 rounded-lg cursor-pointer;
+    height: 60px;
+}
+
+
+.visual-box{
+    @apply flex flex-col m-5 p-5 border-b border-black cursor-pointer
+    justify-center items-center;
+    width: fit-content;
+    /* height: 300px; */
+}
+.visual-heading{
+    @apply font-bold text-3xl mb-2 flex flex-row
+}
+.visual-desc{
+    @apply m-5 p-3 rounded-lg;
+    width: 100%;
+}
+.visual-value-success{
+    @apply text-2xl text-green-600
+}
+.visual-value-fail{
+    @apply text-2xl text-red-600
+}
+.visual-tips-heading{
+    @apply text-left text-xl ml-5 font-bold
+}
+.visual-tips-desc{
+    @apply m-5 p-3 italic bg-slate-100 rounded-lg;
+    width: 100%;
+}
+.visual.icon{
+    @apply flex items-center mr-8
+}
+
+
+.front-page{
+    @apply text-xl flex flex-col items-center;
+    background-color: #0B2845;
+}
+/* .front-page-image{
+    @apply items-center justify-center
+} */
+.front-page-details{
+    @apply text-3xl text-white m-3 p-3 text-left;
+    height: 330px;
+}
+.front-page-user-name{
+    @apply mt-5 text-red-600
+}
