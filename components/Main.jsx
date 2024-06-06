@@ -11,12 +11,9 @@ export default function Main() {
   const [referenceNumber, setReferenceNumber] = useState("");
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
-
-  const [currentComponent, setCurrentComponent] = useState(null);
+  const [currentComponent, setCurrentComponent] = useState('LandingPage');
 
   const fetchData = async (referenceNumber) => {
-    // const url = `https://smart-report-generator-api.vercel.app/${referenceNumber}`;
-    // const url = `http://localhost:4000/getUsers/${referenceNumber}`
     const url = `https://smart-report-generator-backend.onrender.com/${referenceNumber}`
     try {
       setLoading(true);
@@ -34,11 +31,11 @@ export default function Main() {
     }
   };
 
-  // useEffect(() => {
-  //   if (referenceNumber !== "") {
-  //     fetchData(referenceNumber);
-  //   }
-  // }, [referenceNumber]);
+  useEffect(() => {
+    if (referenceNumber && currentComponent === 'Details') {
+      fetchData(referenceNumber);
+    }
+  }, [referenceNumber, currentComponent]);
 
   const handleChange = (e) => {
     const { value } = e.target;
@@ -47,15 +44,13 @@ export default function Main() {
 
   const handleButtonClick = (component) => {
     setCurrentComponent(component);
-    // setReferenceNumber(""); 
   };
 
   const handleClick = () => {
     if (!referenceNumber) {
       alert("Enter Valid Booking ID");
     } else {
-      fetchData(referenceNumber);
-      setCurrentComponent("Details"); 
+      setCurrentComponent("Details");
     }
   };
 
@@ -73,7 +68,7 @@ export default function Main() {
             Health Report Body Chart
           </button>
           <button className="navigation-box" onClick={() => handleButtonClick("SmartInter")}>
-              Smart Interpretation
+            Smart Interpretation
           </button>
           <button className="navigation-box" onClick={() => handleButtonClick("VisualInfo")}>
             Visual aided information with actionable insights
@@ -102,12 +97,12 @@ export default function Main() {
       </div>
       {loading && <div className="loading">Loading...</div>}
       <div>
-          {currentComponent === "FullReport" && <FullReport key="FullReport" users={users} />}
-          {currentComponent === "Details" && <Details key="Details" users={users} />}
-          {currentComponent === "BodyChart" && <BodyChart key="BodyChart" users={users} />}
-          {currentComponent === "SmartInter" && <SmartInter key="SmartInter" users={users} />}
-          {currentComponent === "VisualInfo" && <VisualInfo key="VisualInfo" users={users} />}
-          {referenceNumber && <LandingPage referenceNumber={referenceNumber} />}
+        {currentComponent === "FullReport" && <FullReport key="FullReport" users={users} />}
+        {currentComponent === "Details" && <Details key="Details" users={users} />}
+        {currentComponent === "BodyChart" && <BodyChart key="BodyChart" users={users} />}
+        {currentComponent === "SmartInter" && <SmartInter key="SmartInter" users={users} />}
+        {currentComponent === "VisualInfo" && <VisualInfo key="VisualInfo" users={users} />}
+        {currentComponent === 'LandingPage' && <LandingPage referenceNumber={referenceNumber} />}
       </div>
     </>
   );
