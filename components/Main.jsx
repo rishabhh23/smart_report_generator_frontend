@@ -14,7 +14,7 @@ export default function Main() {
   const [currentComponent, setCurrentComponent] = useState('LandingPage');
 
   const fetchData = async (referenceNumber) => {
-    const url = `https://smart-report-generator-backend.onrender.com/${referenceNumber}`
+    const url = `https://smart-report-generator-backend.onrender.com/getUsers/${referenceNumber}`
     try {
       setLoading(true);
       const response = await axios.get(url, {
