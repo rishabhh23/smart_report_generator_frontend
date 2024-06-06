@@ -16,7 +16,8 @@ export default function Main() {
 
   const fetchData = async (referenceNumber) => {
     // const url = `https://smart-report-generator-api.vercel.app/${referenceNumber}`;
-    const url = `http://localhost:4000/getUsers/${referenceNumber}`
+    // const url = `http://localhost:4000/getUsers/${referenceNumber}`
+    const url = `https://smart-report-generator-backend.onrender.com/${referenceNumber}`
     try {
       setLoading(true);
       const response = await axios.get(url, {

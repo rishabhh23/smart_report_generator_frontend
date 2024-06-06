@@ -73,12 +73,11 @@ body {
 }
 
 .steps{
-    @apply bg-slate-100 m-5 p-5 rounded-lg items-center 
-    text-xl;
+    @apply bg-slate-100 m-5 p-5 rounded-lg items-center text-xl;
 }
 
 .steps-heading{
-    @apply text-5xl mt-5
+    @apply text-5xl mt-5;
 }
 
 .steps-list{
@@ -86,14 +85,14 @@ body {
 }
 
 .steps-list-element{
-    @apply m-5 text-2xl
+    @apply m-5 text-2xl;
 }
 
 .steps-success{
-    @apply text-green-600
+    @apply text-green-600;
 }
 .steps-fail{
-    @apply text-red-600
+    @apply text-red-600;
 }
 
 

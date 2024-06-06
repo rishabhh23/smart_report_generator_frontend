@@ -1,5 +1,6 @@
 import './App.css'
 import './index.css'
+// import styles from "../src/index.css"
 import Main from '../components/Main'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
