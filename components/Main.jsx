@@ -80,6 +80,7 @@ export default function Main() {
         <div className="main-subheading">
           Generate Details of your report within seconds.
           Please wait a few seconds for the report to display below.
+          Booking ID example : 6064578
         </div>
         <div className="reference_number">
           Enter the Booking ID:
