@@ -4,7 +4,7 @@ import Details from "../components/Details";
 import BodyChart from "./BodyChart";
 import SmartInter from "./SmartInter";
 import VisualInfo from "./VisualInfo";
-// import html2pdf from "html2pdf.js";
+import html2pdf from "html2pdf.js";
 
 const FullReport = ({ users }) => {
 
@@ -15,29 +15,28 @@ const FullReport = ({ users }) => {
     //     });
     // }
 
-    // const generatePDF = () => {
-    //     if (users.length > 0) {
-    //         //const patientName = users.customer_name;
-    //         // const fileName = `${patientName}_Patient_Report.pdf`;
-    //         const fileName = "Patient_Report.pdf";
+    const generatePDF = () => {
+        if (users.length > 0) {
+            //const patientName = users.customer_name;
+            // const fileName = `${patientName}_Patient_Report.pdf`;
+            const fileName = "Patient_Report.pdf";
     
-    //         alert("Downloading PDF. Please Wait...");
-    //         const element = document.getElementById("pdf-content");
-    //         html2pdf().from(element).toPdf().get('pdf').then(function(pdf) {
-    //             pdf.save(fileName);
-    //         });
-    //     } else {
-    //         alert("No data to generate PDF.");
-    //     }
-    // };
+            alert("Downloading PDF. Please Wait...");
+            const element = document.getElementById("pdf-content");
+            html2pdf().from(element).toPdf().get('pdf').then(function(pdf) {
+                pdf.save(fileName);
+            });
+        } else {
+            alert("No data to generate PDF.");
+        }
+    };
 
     return (
         <div className="full-report">
             {(users.length > 0) ? 
             <>
-                {/* <button className="download-button" onClick={generatePDF}>Download Report</button> */}
-                {/* <div id="pdf-content"> */}
-                <div>
+                <button className="download-button" onClick={generatePDF}>Download Report</button>
+                <div id="pdf-content">
                     <div className="report-section">
                         <FrontPage users={users} />
                     </div>

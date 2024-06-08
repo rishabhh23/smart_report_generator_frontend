@@ -1,4 +1,4 @@
-import '../src/api/TestDescription';
+import details from '../src/api/TestDescription';
 
 export default function SmartInter({ users }) {
   return (
